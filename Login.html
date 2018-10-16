@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>NU canteen</title>
+	<link rel="stylesheet" href="css/styleupdate.css" type="text/css">
+</head>
+<body>
+	<div class="header">
+		<div>
+			<a href="index.html" ></a>
+			<div>
+
+<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+
+					<?php
+			session_start();
+
+			if(isset($_SESSION["user"]))
+			{
+			echo "<li>
+				<a href=Order_food.php>Order Food</a>
+			</li>";
+			}
+			else
+			{
+			}
+			?>
+
+					<li>
+						<a href="#">Gallery</a>
+					</li>
+
+
+					<li>
+						<a href="#">Feedback</a>
+					</li>
+
+					<li>
+						<a href="#">About us</a>
+					</li>
+
+
+
+				</ul>			</div>
+		</div>
+	</div>
+	<div class="body">
+
+			<div>
+					<form action="is_registered.php" method="post">
+				<br><br><br><br><br><br><br><br><br><br><br>
+				<center>
+				<img src="nirma logo.jpg">
+
+				<table>
+				<tr>
+				<tr><td>
+					User ID</td>
+						<td><input type="text" name="txtuid" placeholder="Username">
+					<br></td></tr>
+
+					<tr>
+					<td>
+					Password</td>
+						<td><input type="password" name="txtpsw" placeholder="Password">
+					<br>    </td></tr>
+
+
+
+						<tr colspan="2">
+						<td colspan="2">
+						<center><input type="submit" value="Login" ></center>
+						</td>
+						</tr>
+						<tr>
+						<td colspan="2"><center>
+						If not registered yet. <a href="sign up.php">Sign up</a></center>
+
+						</td>
+
+						</tr>
+						</table>  </center>
+					</form>
+			</div>
+		</div>
+
+					<br><br><br><br><br><br><br><br><br><br><br>
+	<div class="footer">
+		<div>
+			<div>
+				<h4>Help Line number</h4>
+				<ul>
+					<li class="phone-num">
+						987-456-2134 <br> 963-258-1598
+					</li>
+					<li class="email">
+						<a href="#">Recycle_earth135@gmail.com</a>
+					</li>
+					<li class="address">
+						Ahmedabar<br> Gujarat
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h4></h4>
+				<ul>
+
+
+					<li>
+					<p><b>Soham patel-</p></b>
+						<p>
+							989-767-5454
+						</p>
+
+					</li>
+				</ul>
+			</div>
+			<div class="connect">
+			<h4>Get in touch with us</h4>
+			<a href="#" id="facebook">Facebook</a> <a href="#" id="twitter">Twitter</a> <a href="#" id="googleplus">Google+</a>
+			<form action="index.html">
+
+			</form>
+			</div>
+		</div>
+		<div>
+			<ul>
+<li>
+	<a href="index.php">Home</a>
+</li>
+<li>
+	<a href="check.php">Order Food</a>
+</li>
+<li>
+	<a href="gallery.php">Gallery</a>
+</li>
+
+
+<li>
+	<a href="feedback.php">Feedback</a>
+</li>
+
+<li>
+	<a href="about us.php">About us</a>
+</li></ul><p>
+				&#169; 2017 Canteen Management . All Rights Reserved
+			</p>
+		</div>
+		<?php
+
+
+if(isset($_SESSION["user"]))
+{
+echo "<p align=right><a href=logout.php>Log out.</a></p>";
+}
+else
+{
+}
+?>
+	</div>
+</body>
+</html>
